@@ -1,0 +1,120 @@
+.footer {
+  background-color: #0f0f0f;
+  color: #f9f9f9;
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
+  /* margin-top: 6rem; */
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Brand Section */
+.footer-brand .footer-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #ffb703;
+  margin-bottom: 0.75rem;
+}
+
+/* Brand parts */
+.brand-mla {
+  color: #ffffff; /* white */
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700; /* bold */
+  text-transform: uppercase;
+}
+
+.brand-insights {
+  color: #ffb703; /* keep the original footer title color */
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c5c5c5;
+}
+
+/* Quick Links */
+.footer-links .footer-heading {
+  font-weight: 600;
+  color: #ffb703;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  color: #f9f9f9;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffb703;
+}
+
+/* Socials */
+.footer-socials .footer-heading {
+  font-weight: 600;
+  color: #ffb703;
+  margin-bottom: 0.75rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-icon {
+  color: #f9f9f9;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ffb703;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 2.5rem;
+  border-top: 1px solid #1b2a50;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.footer-bottom p {
+  color: #fff;
+}
+
+.footer-powered {
+  color: #ffb703;
+  text-decoration: none;
+}
+
+.footer-powered:hover {
+  text-decoration: underline;
+}

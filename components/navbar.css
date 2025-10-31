@@ -1,0 +1,128 @@
+/* NAVBAR GLOBAL STYLES */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(15, 15, 15, 0.95); /* dark primary shade */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.navbar-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffb703;
+  text-decoration: none;
+}
+.navbar-logo > .footer-title {
+  margin: 0;
+}
+/* DESKTOP NAV LINKS */
+.navbar-links {
+  display: none;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-link {
+  color: #f9f9f9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffb703;
+}
+
+/* CTA BUTTON */
+.navbar-cta {
+  display: none;
+}
+
+.navbar-btn {
+  background-color: #ffb703;
+  color: #111;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.navbar-btn:hover {
+  background-color: #e5a102;
+}
+
+/* MOBILE MENU BUTTON */
+.navbar-toggle {
+  background: none;
+  border: none;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* MOBILE DROPDOWN */
+.navbar-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f0f0f;
+  color: #f9f9f9;
+  padding: 24px;
+  gap: 16px;
+}
+
+.navbar-dropdown-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #f9f9f9;
+  transition: color 0.3s ease;
+}
+
+.navbar-dropdown-link:hover {
+  color: #ffb703;
+}
+
+.navbar-dropdown-btn {
+  background-color: #ffb703;
+  color: #111;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-cta {
+    display: block;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-dropdown {
+    display: none;
+  }
+}

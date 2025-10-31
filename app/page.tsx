@@ -1,65 +1,193 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { motion } from "framer-motion";
+import Link from "next/link";
+import "./page.css"; // imported globally, not as CSS module
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="main">
+      {/* ===== HERO SECTION ===== */}
+      <section className="hero">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="hero-content"
+        >
+          <h1>
+            Empowering Minds Through <span>Finance</span> & <span>Leadership</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p>
+            Monsurat Lape Adeoti is a transformational public speaker and finance educator
+            helping professionals and organizations communicate with clarity and manage resources with purpose.
           </p>
+          <div className="hero-buttons">
+            <Link href="/booking" className="btn-primary">Book Monsurat</Link>
+            <Link href="/insights" className="btn-secondary">Read Insights</Link>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ===== SIGNATURE AREAS ===== */}
+      <section className="focus">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Areas of Focus
+        </motion.h2>
+        <div className="focus-grid">
+          {[
+            {
+              title: "Financial Empowerment",
+              text: "Simplifying personal finance and helping individuals take control of their money journey.",
+            },
+            {
+              title: "Leadership & Growth",
+              text: "Guiding professionals to lead with authenticity, empathy, and influence.",
+            },
+            {
+              title: "Communication Mastery",
+              text: "Transforming how leaders express ideas, connect emotionally, and drive impact.",
+            },
+            {
+              title: "Entrepreneurship",
+              text: "Nurturing innovative thinking and helping entrepreneurs scale sustainably.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="focus-card"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2 }}
+            >
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </motion.div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ===== FEATURED VIDEO ===== */}
+      <section className="video-section">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="video-box"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/7D6Egw2Cz1Q"
+            title="Monsurat Adeoti Keynote"
+            frameBorder="0"
+            allowFullScreen
+          />
+        </motion.div>
+        <p className="video-caption">
+          “Your voice can inspire, your story can transform, and your finance decisions can empower lives.”
+        </p>
+      </section>
+
+      {/* ===== TESTIMONIALS ===== */}
+      <section className="testimonials">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          What People Say
+        </motion.h2>
+        <div className="testimonial-grid">
+          {[
+            {
+              name: "Tolu Adeyemi",
+              quote: "Monsurat has a way of breaking down finance into simple, relatable concepts. A true gem!",
+            },
+            {
+              name: "Dr. Kemi Onabanjo",
+              quote: "Her sessions leave you motivated and equipped to make tangible change in your career and finances.",
+            },
+            {
+              name: "Lekan Adebayo",
+              quote: "Authentic, engaging, and deeply insightful. Every talk feels like a masterclass.",
+            },
+          ].map((t, i) => (
+            <motion.div
+              key={i}
+              className="testimonial-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2 }}
+            >
+              <p>“{t.quote}”</p>
+              <h4>- {t.name}</h4>
+            </motion.div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ===== INSIGHTS PREVIEW ===== */}
+      <section className="insights">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Latest Insights
+        </motion.h2>
+        <div className="insights-grid">
+          {[
+            {
+              title: "Mastering Money Mindset",
+              desc: "Learn how small shifts in perspective can dramatically improve financial wellbeing.",
+            },
+            {
+              title: "The Art of Confident Communication",
+              desc: "Practical tools for professionals looking to speak and lead with conviction.",
+            },
+            {
+              title: "Financial Planning for Working Women",
+              desc: "A roadmap for building stability, confidence, and long-term security.",
+            },
+          ].map((post, i) => (
+            <motion.div
+              key={i}
+              className="insight-card"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2 }}
+            >
+              <h3>{post.title}</h3>
+              <p>{post.desc}</p>
+              <Link href="/insights" className="read-more">
+                Read More →
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ===== CTA ===== */}
+      <section className="cta">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="cta-box"
+        >
+          <h2>Invite Monsurat to Speak at Your Next Event</h2>
+          <p>
+            Whether it’s a corporate gathering, university event, or leadership retreat,
+            Monsurat delivers value-driven sessions that inspire change and growth.
+          </p>
+          <Link href="/contact" className="btn-primary">
+            Get in Touch
+          </Link>
+        </motion.div>
+      </section>
+    </main>
   );
 }

@@ -1,0 +1,119 @@
+.about-page {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 8%;
+  background: linear-gradient(to right, #0b0b2c, #1e1e4b);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text .highlight {
+  color: #ffce5c;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.amitt-link {
+  color: #ffce5c;
+  font-weight: 500;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.hero-image {
+  text-align: right;
+}
+
+.portrait {
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-story {
+  padding: 5rem 8%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-story h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1e1e4b;
+}
+
+.about-story p {
+  max-width: 800px;
+  margin: 0.8rem auto;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-philosophy {
+  padding: 5rem 8%;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.about-philosophy h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1e1e4b;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.philosophy-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.philosophy-card p {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.about-quote {
+  padding: 5rem 8%;
+  background: #1e1e4b;
+  color: #fff;
+  text-align: center;
+}
+
+.about-quote blockquote {
+  font-size: 1.8rem;
+  font-style: italic;
+  max-width: 700px;
+  margin: auto;
+}

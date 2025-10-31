@@ -1,26 +1,120 @@
-@import "tailwindcss";
+/* ==============================
+   GLOBAL STYLES
+   ============================== */
 
+/* Google Fonts (example) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap");
+
+/* Base color system */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #0f0f0f;
+  --color-accent: #ffb703;
+  --color-background: #ffffff;
+  --color-text: #111111;
+  --color-muted: #b5b5b5;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-heading: "Raleway", sans-serif;
+
+  --container-max: 1200px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Reset and defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  /* color: var(--color-text); */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* General link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e5a102;
+  transform: translateY(-1px);
+}
+
+/* Container utility (like Tailwind's .container) */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section spacing */
+section {
+  padding: 5rem 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  /* color: var(--color-primary); */
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Shadows */
+.shadow-subtle {
+  box-shadow: 0 2px 6px var(--color-shadow);
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
 }
