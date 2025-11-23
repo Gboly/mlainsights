@@ -4,6 +4,7 @@ import "./insightPage.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface InsightPageProps {
   title: string;
@@ -12,8 +13,13 @@ interface InsightPageProps {
   content: string; // HTML or plain text
 }
 
-const path = window.location.pathname
 const InsightPage = ({ title, date, bannerImage, content }: InsightPageProps) => {
+    const [path, setpath] = useState("")
+
+    useEffect(() => {
+        const currentPath = window.location.pathname;
+        setpath(currentPath);
+    }, []);
 
 const otherInsights = insightsExcerpts.reduce<insightsExcerptType[]>((accum, insight) => {    
   if (insight.link !== path && accum.length < 3 ) { accum = [...accum, insight]; }
