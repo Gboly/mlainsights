@@ -80,7 +80,7 @@ export default function HomePage() {
           className="video-box"
         >
           <iframe
-            src="https://www.youtube.com/embed/7D6Egw2Cz1Q"
+            src="https://res.cloudinary.com/dirwr8cde/video/upload/v1763411526/Amitt/video_2025-11-17_20-31-44_hinsm2.mp4"
             title="Monsurat Adeoti Keynote"
             frameBorder="0"
             allowFullScreen

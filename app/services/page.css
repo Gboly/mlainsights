@@ -9,7 +9,7 @@
   background: linear-gradient(to right, #0b0b2c, #1e1e4b);
   color: #fff;
   text-align: center;
-  padding: 6rem 8%;
+  padding: 9rem 8% 5rem;
 }
 
 .services-hero h1 {
@@ -27,6 +27,7 @@
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
+  color: rgba(121, 121, 121);
 }
 
 /* SPEAKING */

@@ -31,7 +31,7 @@ const AboutPage = () => {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/mla-portait.jpg"
+            src="/mla.jpg"
             alt="Monsurat Lape Adeoti"
             width={400}
             height={450}

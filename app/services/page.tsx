@@ -54,7 +54,7 @@ const ServicesPage = () => {
           </div>
           <div className="speaking-image">
             <Image
-              src="/hero-bg.png"
+              src="/mla-3.jpg"
               alt="Monsurat speaking"
               width={500}
               height={400}

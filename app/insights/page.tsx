@@ -3,39 +3,12 @@ import "./page.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-const insights = [
-  {
-    title: "Bridging Confidence and Capital",
-    excerpt:
-      "How understanding your financial behavior can help you communicate value and attract opportunities.",
-    image: "/images/finance-talk.jpg",
-    link: "#",
-  },
-  {
-    title: "Leadership Through Listening",
-    excerpt:
-      "The power of empathetic communication in corporate leadership and how it builds trust.",
-    image: "/images/leadership.jpg",
-    link: "#",
-  },
-  {
-    title: "Money Stories That Shape Us",
-    excerpt:
-      "Why our early experiences with money define our adult financial mindset — and how to rewrite that story.",
-    image: "/images/money-story.jpg",
-    link: "#",
-  },
-  {
-    title: "Women and Wealth: Beyond the Numbers",
-    excerpt:
-      "How women can claim space in financial conversations and lead with confidence and clarity.",
-    image: "/images/women-wealth.jpg",
-    link: "#",
-  },
-];
+import {insightsExcerpts} from "@/util/data";
 
 const InsightsPage = () => {
+
+  const featuredInsights = insightsExcerpts[0];
+
   return (
     <div className="insights-page">
       {/* HERO SECTION */}
@@ -66,7 +39,7 @@ const InsightsPage = () => {
         >
           <div className="featured-image">
             <Image
-              src="/images/featured-insight.jpg"
+              src={featuredInsights.image}
               alt="Featured Insight"
               width={700}
               height={400}
@@ -74,14 +47,11 @@ const InsightsPage = () => {
             />
           </div>
           <div className="featured-text">
-            <h2>Communicating Confidence in a Complex World</h2>
+            <h2>{featuredInsights.title}</h2>
             <p>
-              In a world where information moves fast and attention is scarce,
-              communication has become the new form of capital. Here’s how to use
-              your voice to lead, influence, and inspire change — whether you’re
-              in a boardroom or on a global stage.
+              {featuredInsights.excerpt}
             </p>
-            <Link href="#" className="read-more">
+            <Link href={featuredInsights.link} className="read-more">
               Read Full Article →
             </Link>
           </div>
@@ -90,7 +60,7 @@ const InsightsPage = () => {
 
       {/* INSIGHTS GRID */}
       <section className="insights-grid">
-        {insights.map((item, index) => (
+        {insightsExcerpts.filter((_, index) => index !== 0).map((item, index) => (
           <motion.div
             key={index}
             className="insight-card"
