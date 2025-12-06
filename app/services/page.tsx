@@ -16,17 +16,18 @@ const ServicesPage = () => {
           transition={{ duration: 0.8 }}
         >
           <h1>
-            Empowering Growth through <span className="highlight">Speaking</span>,{" "}
-            <br /> Training, and Consulting
+            Empowering Financial Growth through <br />
+            <span className="highlight">Coaching</span> and Consulting
           </h1>
           <p>
-            Monsurat Lape Adeoti transforms communication and financial literacy
-            into tools for confidence, clarity, and leadership.
+            Monsurat Lape Adeoti helps individuals and organizations build wealth,
+            improve financial behavior, and make confident, informed money decisions.
           </p>
         </motion.div>
       </section>
 
-      {/* SPEAKING SECTION */}
+
+      {/* FINANCIAL COACHING & EDUCATION SECTION */}
       <section className="speaking-section">
         <motion.div
           className="speaking-content"
@@ -35,27 +36,28 @@ const ServicesPage = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="speaking-text">
-            <h2>Speaking Engagements</h2>
+            <h2>Financial Coaching & Education</h2>
             <p>
-              Monsurat is a sought-after speaker who brings financial awareness,
-              emotional intelligence, and leadership insight to life. She delivers
-              talks that inspire transformation, empower decision-making, and
-              challenge perspectives across diverse audiences.
+              Monsurat delivers practical, transformative financial education designed to
+              simplify money management, build confidence, and improve financial behavior.
+              Her sessions empower teams, professionals, and young adults to make informed,
+              intentional financial decisions that create long-term stability and growth.
             </p>
             <ul>
-              <li>Keynote Sessions</li>
-              <li>Corporate and Leadership Retreats</li>
-              <li>University and Youth Events</li>
-              <li>Workshops & Panels</li>
+              <li>Personal Finance Coaching Sessions</li>
+              <li>Corporate Financial Wellness Programs</li>
+              <li>Financial Literacy Training for Schools & Institutions</li>
+              <li>Workshops, Masterclasses & Interactive Money Clinics</li>
             </ul>
             <Link href="/booking" className="cta-btn">
-              Book Monsurat to Speak
+              Book a Coaching or Training Session
             </Link>
           </div>
+
           <div className="speaking-image">
             <Image
               src="/mla-3.jpg"
-              alt="Monsurat speaking"
+              alt="Monsurat financial coaching session"
               width={500}
               height={400}
               className="speaking-photo"
@@ -77,19 +79,24 @@ const ServicesPage = () => {
         <div className="services-grid">
           {[
             {
-              title: "Training Programs",
-              desc: "Tailored workshops designed to equip individuals and teams with practical financial and communication skills.",
+              title: "Financial Training Programs",
+              desc: "Structured workshops designed to enhance financial literacy, budgeting behavior, and wealth-building habits for individuals and teams.",
               icon: "🎓",
             },
             {
-              title: "Consulting",
-              desc: "Through Amitt Training & Consulting, Monsurat partners with organizations to design sustainable learning and strategy models.",
+              title: "Financial Consulting",
+              desc: "Through Amitt Training & Consulting, Monsurat helps organizations strengthen financial wellness culture, optimize staff money management, and create sustainable learning models.",
               icon: "💼",
             },
             {
-              title: "Mentorship",
-              desc: "One-on-one sessions to help emerging professionals navigate career, leadership, and personal finance with clarity.",
+              title: "Mentorship & Coaching",
+              desc: "Personalized one-on-one guidance for professionals seeking clarity in money management, career direction, and leadership development.",
               icon: "🌱",
+            },
+            {
+              title: "Speaking Engagements",
+              desc: "Financial-focused speaking sessions covering money mindset, financial confidence, wealth-building basics, and organizational financial wellness.",
+              icon: "🎤",
             },
           ].map((service, index) => (
             <motion.div
@@ -106,6 +113,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
+
       {/* CTA SECTION */}
       <section className="cta-section">
         <motion.div
@@ -114,16 +122,18 @@ const ServicesPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h2>Let’s Work Together</h2>
+          <h2>Partner with Monsurat for Financial Growth</h2>
           <p>
-            Whether it’s a keynote session, corporate training, or strategic partnership —
-            Monsurat is ready to collaborate with you to create impact.
+            Whether it’s personalized coaching, corporate financial wellness programs,
+            or strategic consulting, Monsurat is ready to help individuals and organizations
+            achieve clarity, confidence, and long term financial success.
           </p>
           <Link href="/contact" className="cta-btn-dark">
             Get in Touch
           </Link>
         </motion.div>
       </section>
+
     </div>
   );
 };

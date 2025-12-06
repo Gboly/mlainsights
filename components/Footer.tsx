@@ -13,7 +13,7 @@ const Footer = () => {
             <span className="brand-insights">insights</span>
           </h3>
           <p className="footer-text">
-            Public Speaker, Finance Educator, and Consultant empowering professionals and organizations through clarity and confidence in finance and communication.
+            Finance Educator and Consultant empowering professionals and organizations through clarity and confidence in finance and communication.
           </p>
         </div>
 

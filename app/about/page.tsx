@@ -17,7 +17,7 @@ const AboutPage = () => {
         >
           <h1>About <span className="highlight">Monsurat Lape Adeoti</span></h1>
           <p>
-            A dynamic public speaker, financial educator, and founder of{" "}
+            A dedicated financial coach, personal finance educator, and founder of{" "}
             <Link href="https://www.amittcsl.com" target="_blank" className="amitt-link">
               Amitt Training & Consulting
             </Link>.
@@ -69,20 +69,20 @@ const AboutPage = () => {
         </motion.p>
       </section>
 
-      {/* SPEAKING PHILOSOPHY */}
+      {/* FINANCIAL COACHING PHILOSOPHY */}
       <section className="about-philosophy">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Speaking Philosophy
+          Financial Coaching Philosophy
         </motion.h2>
         <div className="philosophy-grid">
           {[
-            "Finance should empower, not intimidate.",
-            "Every conversation is an opportunity to inspire clarity.",
-            "True leadership begins with effective communication.",
+            "Financial clarity is the foundation of confident decision-making.",
+            "Wealth grows when knowledge meets consistent action.",
+            "Everyone deserves a simple, personalized path to financial freedom."
           ].map((quote, index) => (
             <motion.div
               key={index}
@@ -103,9 +103,10 @@ const AboutPage = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          “When you master your story, you influence your world.”
+          “When you understand your money, you transform your future.”
         </motion.blockquote>
       </section>
+
     </div>
   );
 };

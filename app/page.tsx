@@ -16,11 +16,11 @@ export default function HomePage() {
           className="hero-content"
         >
           <h1>
-            Empowering Minds Through <span>Finance</span> & <span>Leadership</span>
+            Empowering You to Build <span>Wealth</span> & Lead with <span>Financial Clarity</span>
           </h1>
           <p>
-            Monsurat Lape Adeoti is a transformational public speaker and finance educator
-            helping professionals and organizations communicate with clarity and manage resources with purpose.
+            Monsurat Lape Adeoti is a certified financial coach helping individuals and organizations
+            make smarter money decisions, build sustainable wealth systems, and create financial confidence that lasts.
           </p>
           <div className="hero-buttons">
             <Link href="/booking" className="btn-primary">Book Monsurat</Link>
@@ -28,6 +28,7 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
+
 
       {/* ===== SIGNATURE AREAS ===== */}
       <section className="focus">
@@ -178,10 +179,11 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
           className="cta-box"
         >
-          <h2>Invite Monsurat to Speak at Your Next Event</h2>
+          <h2>Partner with Monsurat</h2>
           <p>
-            Whether it’s a corporate gathering, university event, or leadership retreat,
-            Monsurat delivers value-driven sessions that inspire change and growth.
+            From personal finance coaching to organizational financial wellness programs,
+            Monsurat equips individuals and teams with practical strategies to build wealth,
+            improve money habits, and make confident financial decisions.
           </p>
           <Link href="/contact" className="btn-primary">
             Get in Touch

@@ -8,7 +8,7 @@
 .bookme-header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 60px;
+  margin: 0 auto 1.5rem;
 }
 
 .bookme-header h1 {
@@ -45,7 +45,7 @@ label {
 }
 
 input,
-textarea {
+textarea, select {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid #ddd;

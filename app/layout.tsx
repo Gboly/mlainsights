@@ -28,7 +28,7 @@ const lobster = Lobster_Two({
 });
 
 export const metadata = {
-  title: "MLAinsights | Public Speaker & Finance Educator",
+  title: "MLAinsights | Finance Educator",
   description:
     "Empowering minds through finance, leadership, and communication.",
 };

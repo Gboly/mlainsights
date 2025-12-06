@@ -6,19 +6,20 @@ import "./page.css";
 export default function ContactPage() {
   return (
     <section className="contact-section">
-      <motion.div
-        className="contact-hero"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <h1>Get in Touch</h1>
-        <p>
-          Whether you’re looking to book Monsurat for a speaking engagement,
-          inquire about consulting services, or explore potential collaborations
-          — she’d love to hear from you.
-        </p>
-      </motion.div>
+    <motion.div
+      className="contact-hero"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
+      <h1>Get in Touch</h1>
+      <p>
+        Whether you’re interested in personalized financial coaching, corporate financial wellness programs,
+        consulting services, or exploring strategic collaborations, Monsurat is ready to guide you
+        toward clarity, confidence, and long term financial success.
+      </p>
+    </motion.div>
+
 
       <motion.div
         className="contact-grid"
