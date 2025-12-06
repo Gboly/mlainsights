@@ -3,8 +3,14 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import "./page.css"; // imported globally, not as CSS module
+import { insightsExcerpts } from "@/util/data";
+import { getRandomItems } from "@/util/helper";
+import Insight from "@/components/insight";
 
 export default function HomePage() {
+
+  const selectedInsights = getRandomItems(insightsExcerpts, 3);
+
   return (
     <main className="main">
       {/* ===== HERO SECTION ===== */}
@@ -140,33 +146,8 @@ export default function HomePage() {
           Latest Insights
         </motion.h2>
         <div className="insights-grid">
-          {[
-            {
-              title: "Mastering Money Mindset",
-              desc: "Learn how small shifts in perspective can dramatically improve financial wellbeing.",
-            },
-            {
-              title: "The Art of Confident Communication",
-              desc: "Practical tools for professionals looking to speak and lead with conviction.",
-            },
-            {
-              title: "Financial Planning for Working Women",
-              desc: "A roadmap for building stability, confidence, and long-term security.",
-            },
-          ].map((post, i) => (
-            <motion.div
-              key={i}
-              className="insight-card"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2 }}
-            >
-              <h3>{post.title}</h3>
-              <p>{post.desc}</p>
-              <Link href="/insights" className="read-more">
-                Read More →
-              </Link>
-            </motion.div>
+          {selectedInsights.map((item, index) => (
+            <Insight key={index} item={item} index={index} />
           ))}
         </div>
       </section>
