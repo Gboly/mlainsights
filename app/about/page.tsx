@@ -17,10 +17,13 @@ const AboutPage = () => {
         >
           <h1>About <span className="highlight">Monsurat Lape Adeoti</span></h1>
           <p>
-            A dedicated financial coach, personal finance educator, and founder of{" "}
+            Monsurat 'Lape' is a seasoned and dynamic Financial services expert with skills in Derivatives,
+            Business Analysis, Change Management, Collateral Management and Project Management. 
+            A Patient and creative problem-solver who is known for organizational skills, commitment to excellence and a track record of delivering on projects.
+            <p>Monsurat is the founder of{" "}
             <Link href="https://www.amittcsl.com" target="_blank" className="amitt-link">
               Amitt Training & Consulting
-            </Link>.
+            </Link>; a training, consulting, advisory and services that empower individuals/group, SMEs, and organizations to grow.</p>
           </p>
         </motion.div>
 
