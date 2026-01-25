@@ -2,8 +2,48 @@
 
 import { motion } from "framer-motion";
 import "./page.css";
+import { use, useState } from "react";
+
+type initialFormStateType = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+const initialFormState: initialFormStateType = {
+  name: "",
+  email: "",
+  message: "",
+};
 
 export default function ContactPage() {
+
+  const [formData, setFormData] = useState(initialFormState)
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading"); 
+
+    const res = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify(formData),
+    }); 
+
+    if (res.ok) {
+      setStatus("success");
+      setFormData(initialFormState); 
+    } else {
+      setStatus("error");
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }
+
   return (
     <section className="contact-section">
     <motion.div
@@ -41,22 +81,31 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <h2>Send a Message</h2>
 
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name" />
+            <input 
+            value={formData.name}
+            onChange={handleChange}
+            type="text" id="name" name="name" required placeholder="Your name" />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            <input 
+            value={formData.email}
+            onChange={handleChange}
+            type="email" id="email" name="email" required placeholder="you@example.com" />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows={5} required placeholder="Type your message..."></textarea>
+            <textarea 
+            value={formData.message}
+            onChange={handleChange}
+            id="message" name="message" rows={5} required placeholder="Type your message..."></textarea>
           </div>
 
           <motion.button
