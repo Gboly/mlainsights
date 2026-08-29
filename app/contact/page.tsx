@@ -2,58 +2,8 @@
 
 import { motion } from "framer-motion";
 import "./page.css";
-import { useState } from "react";
-import { API_BASE_URL } from "@/util/api";
-import FormStatusMessage from "@/components/FormStatusMessage";
-
-type initialFormStateType = {
-  name: string;
-  email: string;
-  message: string;
-}
-const initialFormState: initialFormStateType = { name: "", email: "", message: "" }
 
 export default function ContactPage() {
-
-  const [formData, setFormData] = useState(initialFormState)
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState<string>("");
-
-  const handleSubmit = async () => {
-    setStatus("loading");
-    setErrorMsg("");
-
-    try {
-      const res = await fetch(`${API_BASE_URL}/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (res.ok && data.success) {
-        setStatus("success");
-        setFormData(initialFormState);
-      } else {
-        setStatus("error");
-        setErrorMsg(data.error || "Something went wrong. Please try again.");
-      }
-    } catch (err) {
-      console.error("Contact form submit failed:", err);
-      setStatus("error");
-      setErrorMsg("Couldn't reach the server. Please check your connection and try again.");
-    }
-  };
-
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value })
-  }
-
-  const handleTextInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value })
-  }
-
   return (
     <section className="contact-section">
       <motion.div
@@ -90,31 +40,22 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={(e) => { e.preventDefault(); handleSubmit() }}>
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
           <h2>Send a Message</h2>
 
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
-            <input
-              value={formData.name}
-              onInput={handleInput}
-              type="text" id="name" name="name" required placeholder="Your name" />
+            <input type="text" id="name" name="name" required placeholder="Your name" />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input
-              value={formData.email}
-              onInput={handleInput}
-              type="email" id="email" name="email" required placeholder="you@example.com" />
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea
-              value={formData.message}
-              onInput={handleTextInput}
-              id="message" name="message" rows={5} required placeholder="Type your message..."></textarea>
+            <textarea id="message" name="message" rows={5} required placeholder="Type your message..."></textarea>
           </div>
 
           <motion.button

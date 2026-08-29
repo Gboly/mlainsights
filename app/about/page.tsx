@@ -17,10 +17,8 @@ const AboutPage = () => {
         >
           <h1>About <span className="highlight">Monsurat Lape Adeoti</span></h1>
           <p>
-            Monsurat 'Lape' is a seasoned and dynamic Financial services expert with skills in Derivatives,
-            Business Analysis, Change Management, Collateral Management and Project Management. 
-            A Patient and creative problem-solver who is known for organizational skills, commitment to excellence and a track record of delivering on projects.
-            <p>Monsurat is the founder of{" "}
+            {"Monsurat 'Lape' is a seasoned and dynamic Financial services expert with skills in Derivatives, Business Analysis, Change Management, Collateral Management and Project Management. A Patient and creative problem-solver who is known for organizational skills, commitment to excellence and a track record of delivering on projects."}
+            <p>{"Monsurat 'Lape' is the founder of"}
             <Link href="https://www.amittcsl.com" target="_blank" className="amitt-link">
               Amitt Training & Consulting
             </Link>; a training, consulting, advisory and services that empower individuals/group, SMEs, and organizations to grow.</p>
@@ -34,7 +32,7 @@ const AboutPage = () => {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/mla.jpg"
+            src="/mla.jpeg"
             alt="Monsurat Lape Adeoti"
             width={400}
             height={450}
@@ -58,17 +56,14 @@ const AboutPage = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Monsurat’s journey began with a passion for transforming complex financial concepts 
-          into relatable, actionable insights. Over the years, she has empowered professionals, 
-          entrepreneurs, and students to gain clarity and confidence in their financial decisions.
+          {"Monsurat 'Lape' is an Accounting graduate from the University of Ilorin and MBA from the University of Hull. She started her career at Chartered Bank in Nigeria. She has also worked at prestigious institutions such as Northern Trust, Schroders Investment, Newton Investment, Morgan Stanley, S & C and Macquarie Bank all in the United Kingdom."}
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Through captivating storytelling and practical guidance, she bridges the gap between 
-          personal finance, business strategy, and purpose-driven living.
+          {"Monsurat 'Lape' holds an Investment Administration Qualification from the Chartered Institute of Securities and Investment UK (CISI), Business Analysis Diploma and a certificate in Prince 2 Project Management. She had attended various management, leadership and entrepreneurship courses in various organisations."}
         </motion.p>
       </section>
 
