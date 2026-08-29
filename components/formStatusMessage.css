@@ -1,0 +1,97 @@
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  position: relative;
+}
+
+.status-card--success {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(5, 150, 105, 0.05));
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 24px -8px rgba(16, 185, 129, 0.35);
+}
+
+.status-card--error {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(220, 38, 38, 0.05));
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  box-shadow: 0 8px 24px -8px rgba(239, 68, 68, 0.3);
+}
+
+.status-icon-ring {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-icon-ring--success {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.status-icon-ring--error {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.status-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.status-icon-circle {
+  fill: none;
+  stroke: #10b981;
+  stroke-width: 3;
+}
+
+.status-icon-circle--error {
+  stroke: #ef4444;
+}
+
+.status-icon-check {
+  fill: none;
+  stroke: #10b981;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.status-icon-x {
+  stroke: #ef4444;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.status-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.status-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.status-card--success .status-title {
+  color: #047857;
+}
+
+.status-card--error .status-title {
+  color: #b91c1c;
+}
+
+.status-subtext {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.4;
+}
