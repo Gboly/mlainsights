@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import "./page.css";
 import { useState } from "react";
-import { API_BASE_URL } from "@/lib/api";
+import { API_BASE_URL } from "@/util/api";
 import FormStatusMessage from "@/components/FormStatusMessage";
 
 type initialFormStateType = {
